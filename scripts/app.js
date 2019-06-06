@@ -89,6 +89,8 @@ if (navigator.mediaDevices.getUserMedia) {
       var audioURL = window.URL.createObjectURL(blob);
       audio.src = audioURL;
       console.log("recorder stopped");
+      wavesurfer.load(audioURL);
+       console.log(audioURL);
 
       deleteButton.onclick = function(e) {
         evtTgt = e.target;
