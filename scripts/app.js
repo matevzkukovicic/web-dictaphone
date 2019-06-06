@@ -1,8 +1,5 @@
 // set up basic variables for app
-$(document).ready(function(){
-    $("select,input").change(function ()
-    {
-        // My code and some alerts
+
    
 var record = document.querySelector('.record');
 var stop = document.querySelector('.stop');
@@ -183,6 +180,3 @@ window.onresize = function() {
 
 window.onresize();
           
-          
- })
-});
