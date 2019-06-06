@@ -6,6 +6,12 @@ var soundClips = document.querySelector('.sound-clips');
 var canvas = document.querySelector('.visualizer');
 var mainSection = document.querySelector('.main-controls');
 
+var wave = $.getScript('https://unpkg.com/wavesurfer.js', function () {          
+      var wavesurfer = WaveSurfer.create({
+        container: '#waveform'
+      });
+});  
+
 // disable stop button while not recording
 
 stop.disabled = true;
