@@ -7,11 +7,7 @@ var soundClips = document.querySelector('.sound-clips');
 var canvas = document.querySelector('.visualizer');
 var mainSection = document.querySelector('.main-controls');
 
-var wavesurfer  = $.getScript('https://unpkg.com/wavesurfer.js', function () {          
-      var wavesurfer = WaveSurfer.create({
-        container: '#waveform'
-      });
-});  
+
 
 // disable stop button while not recording
 
@@ -89,6 +85,11 @@ if (navigator.mediaDevices.getUserMedia) {
       var audioURL = window.URL.createObjectURL(blob);
       audio.src = audioURL;
       console.log("recorder stopped");
+       var wavesurfer  = $.getScript('https://unpkg.com/wavesurfer.js', function () {          
+            var wavesurfer = WaveSurfer.create({
+              container: '#waveform'
+            });
+      });  
       wavesurfer.load(audioURL);
        console.log(audioURL);
 
